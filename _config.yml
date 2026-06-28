@@ -16,9 +16,9 @@ timezone:
 
 title: Mohammadreza Davari # the main title
 
-tagline: Physics Researcher # it will display as the subtitle
+tagline: Physics Researcher, Cosmologist # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
+description: >- I research physics and cosmology. My research interests are theoretical and observational cosmology with a fundamental physics approach. For collaborations, contact me. # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: your_full_name
-  email: example@domain.com # change to your email address
+  email: m_davari_@outlook.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
