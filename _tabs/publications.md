@@ -1,26 +1,22 @@
 ---
-layout: page
 title: Publications
 icon: fas fa-book-open
-permalink: /publications/
+order: 4
 ---
 
-<link rel="stylesheet" href="/assets/css/publications.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
-<div class="hero">
+<div class="pub-hero">
 
-<h1>Publications</h1>
+# Publications
 
-<p>
-My publications, preprints, citations and research profiles are available
-through the following academic services.
-</p>
+My research profiles, publications, preprints and citation records.
 
 </div>
 
-<div class="profile-grid">
+<div class="pub-grid">
 
-<a class="profile-card"
+<a class="pub-card"
 href="https://orcid.org/0000-0000-0000-0000"
 target="_blank">
 
@@ -29,15 +25,15 @@ target="_blank">
 <h2>ORCID</h2>
 
 <p>
-Persistent researcher identifier and publication record.
+Persistent researcher identifier and complete publication record.
 </p>
 
-<span>Visit profile →</span>
+<span>Visit →</span>
 
 </a>
 
 
-<a class="profile-card"
+<a class="pub-card"
 href="https://inspirehep.net/authors/0000000"
 target="_blank">
 
@@ -49,12 +45,12 @@ target="_blank">
 High Energy Physics author profile, citations and publications.
 </p>
 
-<span>Visit profile →</span>
+<span>Visit →</span>
 
 </a>
 
 
-<a class="profile-card"
+<a class="pub-card"
 href="https://scholar.google.com/citations?user=XXXXXXXX"
 target="_blank">
 
@@ -63,15 +59,15 @@ target="_blank">
 <h2>Google Scholar</h2>
 
 <p>
-Citation metrics, h-index and complete publication list.
+Citation metrics, h-index and publication list.
 </p>
 
-<span>Visit profile →</span>
+<span>Visit →</span>
 
 </a>
 
 
-<a class="profile-card"
+<a class="pub-card"
 href="https://arxiv.org/a/XXXXXXXX"
 target="_blank">
 
@@ -80,10 +76,10 @@ target="_blank">
 <h2>arXiv</h2>
 
 <p>
-Preprints and recent research papers.
+Preprints and research articles.
 </p>
 
-<span>View papers →</span>
+<span>Visit →</span>
 
 </a>
 
@@ -97,8 +93,9 @@ Preprints and recent research papers.
 - Inflation
 - Dark Energy
 - Modified Gravity
+- Quantum Gravity
 - Machine Learning
 
 ---
 
-For a complete publication record, please visit one of the academic profiles above.
+For a complete publication record, please use one of the academic profiles above.
