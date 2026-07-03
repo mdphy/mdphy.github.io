@@ -2,7 +2,7 @@
 title: Testing No slip model with pulsar timing arrays: NANOGrav and IPTA
 date: 2024-09-01
 
-categories: [Atricles]
+categories: [Articles]
 
 tags:
   - modified gravity
