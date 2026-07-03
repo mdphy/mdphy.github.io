@@ -18,5 +18,5 @@ We perform an observational study of modified gravity considering a potential in
 
 ## Links
 
-- **arXiv:** https://arxiv.org/abs/2409.05956
-- **Journal:** https://iopscience.iop.org/journal/1475-7516
+- **arXiv:** [2409.05956](https://arxiv.org/abs/2409.05956)
+- **Journal:** [Journal of Cosmology and Astroparticle Physics](https://iopscience.iop.org/journal/1475-7516)
