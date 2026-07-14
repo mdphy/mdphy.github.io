@@ -1,7 +1,7 @@
 ---
 title: About
 icon: fas fa-user
-order: 5
+order: 2
 ---
 
 # Hi, I'm Mohammadreza Davari 👋
