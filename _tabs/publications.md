@@ -3,6 +3,9 @@ title: Publications
 icon: fas fa-book-open
 order: 2
 ---
+Welcome to my publications page. Here you can find my academic profiles.
+
+## Academic Profiles
 
 <style>
 .academic-profiles {
