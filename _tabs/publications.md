@@ -1,8 +1,8 @@
 ---
-
-title: Academic Profiles
+title: Publications
 icon: fas fa-book-open
 order: 2
+---
 
 <style>
 .academic-profiles {
