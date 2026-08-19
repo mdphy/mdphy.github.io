@@ -1,0 +1,173 @@
+/* =========================================================
+   Academic Profile Cards
+   ========================================================= */
+
+.academic-profiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.profile-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 105px;
+  padding: 20px 22px;
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-radius: 18px;
+  text-decoration: none !important;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(127, 127, 127, 0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(127, 127, 127, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.profile-icon {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 17px;
+  border-radius: 15px;
+  background: rgba(127, 127, 127, 0.10);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.profile-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.profile-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.profile-description {
+  margin-top: 5px;
+  font-size: 0.82rem;
+  opacity: 0.65;
+  line-height: 1.4;
+}
+
+.profile-arrow {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  padding-left: 12px;
+  font-size: 20px;
+  opacity: 0.45;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.profile-card:hover .profile-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+/* Individual platform accents */
+
+.scholar .profile-icon {
+  background: rgba(66, 133, 244, 0.12);
+}
+
+.orcid .profile-icon {
+  background: rgba(166, 206, 57, 0.14);
+}
+
+.arxiv .profile-icon {
+  background: rgba(180, 40, 40, 0.12);
+}
+
+.researchgate .profile-icon {
+  background: rgba(0, 190, 190, 0.12);
+}
+
+.inspire .profile-icon {
+  background: rgba(120, 90, 190, 0.12);
+}
+
+/* Full-width final card */
+
+.profile-card:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .academic-profiles {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .profile-card:last-child {
+    grid-column: auto;
+  }
+
+  .profile-card {
+    min-height: 92px;
+    padding: 17px 18px;
+    border-radius: 16px;
+  }
+
+  .profile-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    margin-right: 14px;
+  }
+}
+
+/* Dark mode */
+
+[data-mode="dark"] .profile-card {
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+[data-mode="dark"] .profile-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.30);
+}
+
+[data-mode="dark"] .profile-card::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    transparent 60%
+  );
+}
