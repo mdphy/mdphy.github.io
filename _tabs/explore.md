@@ -2,7 +2,7 @@
 layout: page
 title: Explore
 icon: fas fa-layer-group
-order: 2
+order: 3
 ---
 
 <div class="explore-grid">
