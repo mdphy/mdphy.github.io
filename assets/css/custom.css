@@ -384,15 +384,3 @@
 
 
 
-
-/* Explore test */
-
-.explore-card {
-  display: flex !important;
-  align-items: center !important;
-  min-height: 105px !important;
-  padding: 20px 22px !important;
-  border: 2px solid red !important;
-  border-radius: 18px !important;
-  margin-bottom: 18px !important;
-}
