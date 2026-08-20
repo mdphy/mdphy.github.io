@@ -6,95 +6,110 @@ order: 2
 
 Explore the different areas of my scientific work, educational materials, and projects.
 
-<div class="explore-grid">
+<div class="explore-dashboard">
 
-  <div class="explore-card explore-lectures">
+  <div class="explore-item explore-item-01">
+    <div class="explore-number">01</div>
 
-    <div class="explore-icon">
+    <div class="explore-symbol">
       <i class="fas fa-chalkboard-user"></i>
     </div>
 
-    <div class="explore-content">
-      <span class="explore-name">Lectures</span>
-      <span class="explore-description">
-        Educational materials and lecture notes
-      </span>
+    <div class="explore-text">
+      <div class="explore-title">Lectures</div>
+      <div class="explore-description">
+        Educational materials, lecture notes, and learning resources.
+      </div>
     </div>
 
-    <span class="explore-arrow">↗</span>
-
+    <div class="explore-link">
+      <span>Explore</span>
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </div>
   </div>
 
 
-  <div class="explore-card explore-visual">
+  <div class="explore-item explore-item-02">
+    <div class="explore-number">02</div>
 
-    <div class="explore-icon">
+    <div class="explore-symbol">
       <i class="fas fa-chart-line"></i>
     </div>
 
-    <div class="explore-content">
-      <span class="explore-name">Visual Science</span>
-      <span class="explore-description">
-        Scientific diagrams, visualizations and interactive content
-      </span>
+    <div class="explore-text">
+      <div class="explore-title">Visual Science</div>
+      <div class="explore-description">
+        Scientific diagrams, visualizations, simulations, and interactive content.
+      </div>
     </div>
 
-    <span class="explore-arrow">↗</span>
-
+    <div class="explore-link">
+      <span>Explore</span>
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </div>
   </div>
 
 
-  <div class="explore-card explore-research">
+  <div class="explore-item explore-item-03">
+    <div class="explore-number">03</div>
 
-    <div class="explore-icon">
+    <div class="explore-symbol">
       <i class="fas fa-flask"></i>
     </div>
 
-    <div class="explore-content">
-      <span class="explore-name">Research</span>
-      <span class="explore-description">
-        Research ideas, results and ongoing work
-      </span>
+    <div class="explore-text">
+      <div class="explore-title">Research</div>
+      <div class="explore-description">
+        Research ideas, scientific results, questions, and ongoing work.
+      </div>
     </div>
 
-    <span class="explore-arrow">↗</span>
-
+    <div class="explore-link">
+      <span>Explore</span>
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </div>
   </div>
 
 
-  <div class="explore-card explore-notes">
+  <div class="explore-item explore-item-04">
+    <div class="explore-number">04</div>
 
-    <div class="explore-icon">
+    <div class="explore-symbol">
       <i class="fas fa-pen-to-square"></i>
     </div>
 
-    <div class="explore-content">
-      <span class="explore-name">Scientific Notes</span>
-      <span class="explore-description">
-        Short scientific notes and explanations
-      </span>
+    <div class="explore-text">
+      <div class="explore-title">Scientific Notes</div>
+      <div class="explore-description">
+        Short scientific explanations, ideas, derivations, and notes.
+      </div>
     </div>
 
-    <span class="explore-arrow">↗</span>
-
+    <div class="explore-link">
+      <span>Explore</span>
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </div>
   </div>
 
 
-  <div class="explore-card explore-projects">
+  <div class="explore-item explore-item-05">
+    <div class="explore-number">05</div>
 
-    <div class="explore-icon">
+    <div class="explore-symbol">
       <i class="fas fa-code"></i>
     </div>
 
-    <div class="explore-content">
-      <span class="explore-name">Projects</span>
-      <span class="explore-description">
-        Scientific software and research projects
-      </span>
+    <div class="explore-text">
+      <div class="explore-title">Projects</div>
+      <div class="explore-description">
+        Scientific software, computational tools, and research projects.
+      </div>
     </div>
 
-    <span class="explore-arrow">↗</span>
-
+    <div class="explore-link">
+      <span>Explore</span>
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </div>
   </div>
 
 </div>
