@@ -8,7 +8,7 @@ Explore the different areas of my scientific work, educational materials, and pr
 
 <div class="explore-grid">
 
-  <a href="/lectures/" class="explore-card explore-lectures">
+  <div class="explore-card explore-lectures">
 
     <div class="explore-icon">
       <i class="fas fa-chalkboard-user"></i>
@@ -23,10 +23,10 @@ Explore the different areas of my scientific work, educational materials, and pr
 
     <span class="explore-arrow">↗</span>
 
-  </a>
+  </div>
 
 
-  <a href="/visual-science/" class="explore-card explore-visual">
+  <div class="explore-card explore-visual">
 
     <div class="explore-icon">
       <i class="fas fa-chart-line"></i>
@@ -41,10 +41,10 @@ Explore the different areas of my scientific work, educational materials, and pr
 
     <span class="explore-arrow">↗</span>
 
-  </a>
+  </div>
 
 
-  <a href="/research/" class="explore-card explore-research">
+  <div class="explore-card explore-research">
 
     <div class="explore-icon">
       <i class="fas fa-flask"></i>
@@ -59,10 +59,10 @@ Explore the different areas of my scientific work, educational materials, and pr
 
     <span class="explore-arrow">↗</span>
 
-  </a>
+  </div>
 
 
-  <a href="/scientific-notes/" class="explore-card explore-notes">
+  <div class="explore-card explore-notes">
 
     <div class="explore-icon">
       <i class="fas fa-pen-to-square"></i>
@@ -77,10 +77,10 @@ Explore the different areas of my scientific work, educational materials, and pr
 
     <span class="explore-arrow">↗</span>
 
-  </a>
+  </div>
 
 
-  <a href="/projects/" class="explore-card explore-projects">
+  <div class="explore-card explore-projects">
 
     <div class="explore-icon">
       <i class="fas fa-code"></i>
@@ -95,6 +95,6 @@ Explore the different areas of my scientific work, educational materials, and pr
 
     <span class="explore-arrow">↗</span>
 
-  </a>
+  </div>
 
 </div>
