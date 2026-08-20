@@ -175,188 +175,275 @@
 
 
 
+
 /* =========================================================
-   Explore Cards
+   Explore Dashboard
    ========================================================= */
 
-.explore-grid {
+.explore-dashboard {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-  margin: 30px 0;
+  margin: 32px 0;
 }
 
-.explore-card {
+.explore-item {
   position: relative;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: 42px 64px 1fr auto;
   align-items: center;
-  min-height: 105px;
-  padding: 20px 22px;
+
+  min-height: 120px;
+  padding: 22px;
 
   border: 1px solid rgba(127, 127, 127, 0.18);
-  border-radius: 18px;
+  border-radius: 20px;
 
-  text-decoration: none !important;
   overflow: hidden;
+
+  background: transparent;
 
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+    box-shadow 0.25s ease;
 }
 
-.explore-card::before {
+.explore-item::before {
   content: "";
+
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
 
-  background: linear-gradient(
-    135deg,
-    rgba(127, 127, 127, 0.08),
-    transparent 60%
-  );
+  width: 4px;
+  height: 100%;
 
-  pointer-events: none;
+  background: var(--link-color);
+
+  opacity: 0.65;
+
+  transition:
+    width 0.25s ease,
+    opacity 0.25s ease;
 }
 
-.explore-card:hover {
+.explore-item:hover {
   transform: translateY(-5px);
 
   border-color: rgba(127, 127, 127, 0.35);
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.10);
+}
+
+.explore-item:hover::before {
+  width: 6px;
+  opacity: 1;
+}
+
+
+/* Number */
+
+.explore-number {
+  position: relative;
+  z-index: 1;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  opacity: 0.35;
 }
 
 
 /* Icon */
 
-.explore-icon {
+.explore-symbol {
   position: relative;
   z-index: 1;
 
   width: 58px;
   height: 58px;
-  min-width: 58px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-right: 17px;
-
-  border-radius: 15px;
+  border-radius: 16px;
 
   background: rgba(127, 127, 127, 0.10);
 
   color: var(--link-color);
 
-  font-size: 18px;
+  font-size: 19px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.explore-item:hover .explore-symbol {
+  transform: scale(1.06);
 }
 
 
-/* Content */
+/* Text */
 
-.explore-content {
+.explore-text {
   position: relative;
   z-index: 1;
 
-  display: flex;
-  flex-direction: column;
-
   min-width: 0;
+
+  padding: 0 16px;
 }
 
-.explore-name {
+.explore-title {
   font-size: 1.05rem;
   font-weight: 700;
+
   line-height: 1.35;
 }
 
 .explore-description {
   margin-top: 5px;
 
-  font-size: 0.82rem;
-  line-height: 1.4;
+  font-size: 0.80rem;
 
-  opacity: 0.65;
+  line-height: 1.45;
+
+  opacity: 0.62;
 }
 
 
-/* Arrow */
+/* Explore link */
 
-.explore-arrow {
+.explore-link {
   position: relative;
   z-index: 1;
 
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
   padding-left: 12px;
 
-  font-size: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
   opacity: 0.45;
 
   transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-.explore-card:hover .explore-arrow {
-  transform: translate(3px, -3px);
+.explore-item:hover .explore-link {
   opacity: 1;
+
+  transform: translate(2px, -2px);
+}
+
+.explore-link i {
+  font-size: 11px;
 }
 
 
-/* Individual card accents */
+/* Individual accents */
 
-.explore-lectures .explore-icon {
+.explore-item-01 .explore-symbol {
   background: rgba(66, 133, 244, 0.12);
 }
 
-.explore-visual .explore-icon {
+.explore-item-02 .explore-symbol {
   background: rgba(0, 170, 160, 0.12);
 }
 
-.explore-research .explore-icon {
+.explore-item-03 .explore-symbol {
   background: rgba(180, 40, 40, 0.12);
 }
 
-.explore-notes .explore-icon {
+.explore-item-04 .explore-symbol {
   background: rgba(230, 150, 40, 0.13);
 }
 
-.explore-projects .explore-icon {
+.explore-item-05 .explore-symbol {
   background: rgba(120, 90, 190, 0.12);
+}
+
+
+/* Last card */
+
+.explore-item-05 {
+  grid-column: 1 / -1;
 }
 
 
 /* Mobile */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
-  .explore-grid {
+  .explore-dashboard {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
-  .explore-card {
-    min-height: 92px;
-    padding: 17px 18px;
-    border-radius: 16px;
+  .explore-item {
+    grid-template-columns: 34px 56px 1fr auto;
+
+    min-height: 105px;
+
+    padding: 18px;
   }
 
-  .explore-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    margin-right: 14px;
+  .explore-symbol {
+    width: 50px;
+    height: 50px;
+
+    font-size: 17px;
   }
 
-  .explore-name {
+  .explore-text {
+    padding: 0 12px;
+  }
+
+  .explore-title {
     font-size: 1rem;
   }
 
   .explore-description {
-    font-size: 0.80rem;
+    font-size: 0.78rem;
+  }
+
+  .explore-item-05 {
+    grid-column: auto;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .explore-item {
+    grid-template-columns: 32px 52px 1fr;
+  }
+
+  .explore-symbol {
+    width: 46px;
+    height: 46px;
+  }
+
+  .explore-text {
+    padding: 0 10px;
+  }
+
+  .explore-link {
+    display: none;
   }
 
 }
@@ -364,23 +451,15 @@
 
 /* Dark mode */
 
-[data-mode="dark"] .explore-card {
+[data-mode="dark"] .explore-item {
   border-color: rgba(255, 255, 255, 0.10);
 }
 
-[data-mode="dark"] .explore-card:hover {
+[data-mode="dark"] .explore-item:hover {
   border-color: rgba(255, 255, 255, 0.22);
 
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.30);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.30);
 }
-
-[data-mode="dark"] .explore-card::before {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05),
-    transparent 60%
-  );
-}
-
 
 
