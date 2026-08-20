@@ -1,62 +1,293 @@
 ---
-title: Explore
-icon: fas fa-layer-group
-order: 2
+layout: default
+title: Home
 ---
-
-Explore the different areas of my scientific work, educational materials, and projects.
 
 <style>
 
-/* ================================
-   EXPLORE DASHBOARD
-   ================================ */
 
-.explore-dashboard {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin: 32px 0;
+.home-feature-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 18px 0 30px;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.home-feature-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 
-/* ================================
-   CARD
-   ================================ */
 
-.explore-item {
-  --accent: #4285f4;
+/* =========================================================
+   HOME
+   ========================================================= */
 
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.home-hero {
   position: relative;
-  display: flex;
-  align-items: center;
+  overflow: hidden;
 
-  min-height: 118px;
-  padding: 22px 23px;
+  margin: 18px 0 42px;
+  padding: 58px 48px;
+
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  border-radius: 28px;
+
+  background: rgba(127, 127, 127, 0.025);
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.035),
+    0 18px 45px rgba(0, 0, 0, 0.045);
+}
+
+
+.home-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(127, 127, 127, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(127, 127, 127, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 34px 34px;
+
+  mask-image: linear-gradient(
+    to bottom right,
+    black,
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+
+.home-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.home-eyebrow {
+  margin-bottom: 13px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+
+.home-title {
+  margin: 0;
+
+  font-size: clamp(2.3rem, 6vw, 4.2rem);
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+
+.home-subtitle {
+  margin-top: 18px;
+
+  font-size: clamp(1rem, 2vw, 1.22rem);
+
+  line-height: 1.55;
+
+  opacity: 0.68;
+}
+
+
+.home-description {
+  max-width: 650px;
+
+  margin-top: 14px;
+
+  font-size: 0.92rem;
+  line-height: 1.7;
+
+  opacity: 0.58;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 11px;
+
+  margin-top: 28px;
+}
+
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 17px;
+
+  border-radius: 12px;
+
+  font-size: 0.82rem;
+  font-weight: 650;
+
+  text-decoration: none !important;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.home-button-primary {
+  background: var(--link-color);
+
+  color: #fff !important;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+.home-button-secondary {
+  border: 1px solid rgba(127, 127, 127, 0.20);
+
+  background: rgba(127, 127, 127, 0.06);
+
+  color: inherit !important;
+}
+
+
+.home-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.home-button-primary:hover {
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.home-section {
+  margin: 44px 0;
+}
+
+
+.home-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.home-section-title {
+  margin: 0;
+
+  font-size: 1.35rem;
+  font-weight: 750;
+
+  letter-spacing: -0.025em;
+}
+
+
+.home-section-label {
+  font-size: 0.72rem;
+
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================================
+   CURRENTLY EXPLORING
+   ========================================================= */
+
+.currently-exploring {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+.exploring-item {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  min-height: 145px;
+
+  padding: 23px;
+
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(127, 127, 127, 0.045),
+      transparent 70%
+    );
 
   overflow: hidden;
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.92);
-
-  box-sizing: border-box;
-
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.025),
-    0 8px 24px rgba(0, 0, 0, 0.035);
-
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
 }
 
 
-/* subtle top accent */
-
-.explore-item::before {
+.exploring-item::after {
   content: "";
 
   position: absolute;
@@ -64,297 +295,328 @@ Explore the different areas of my scientific work, educational materials, and pr
   top: 0;
   left: 0;
 
-  width: 100%;
-  height: 3px;
+  width: 3px;
+  height: 100%;
 
-  background: var(--accent);
+  background: var(--explore-accent);
 
-  opacity: 0;
-
-  transition: opacity 0.25s ease;
+  opacity: 0.65;
 }
 
 
-/* hover */
+.exploring-item:hover {
+  transform: translateY(-4px);
 
-.explore-item:hover {
-  transform: translateY(-5px);
-
-  border-color: color-mix(
-    in srgb,
-    var(--accent) 35%,
-    transparent
-  );
+  border-color: rgba(127, 127, 127, 0.25);
 
   box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.06),
-    0 18px 38px rgba(0, 0, 0, 0.08);
-}
-
-.explore-item:hover::before {
-  opacity: 1;
+    0 10px 28px rgba(0, 0, 0, 0.065);
 }
 
 
-/* ================================
-   ICON
-   ================================ */
-
-.explore-symbol {
-  position: relative;
-
-  flex: 0 0 58px;
-
-  width: 58px;
-  height: 58px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.exploring-number {
+  flex: 0 0 auto;
 
   margin-right: 18px;
 
-  border-radius: 17px;
+  font-size: 0.70rem;
+  font-weight: 750;
 
-  background: color-mix(
-    in srgb,
-    var(--accent) 11%,
-    transparent
-  );
+  letter-spacing: 0.08em;
 
-  color: var(--accent);
+  color: var(--explore-accent);
 
-  font-size: 19px;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
-
-.explore-item:hover .explore-symbol {
-  transform: scale(1.06);
-
-  background: color-mix(
-    in srgb,
-    var(--accent) 16%,
-    transparent
-  );
+  opacity: 0.65;
 }
 
 
-/* ================================
-   TEXT
-   ================================ */
-
-.explore-text {
-  flex: 1;
+.exploring-content {
   min-width: 0;
 }
 
-.explore-title {
-  font-size: 1.06rem;
-  font-weight: 700;
-  line-height: 1.35;
 
-  letter-spacing: -0.01em;
+.exploring-title {
+  font-size: 1.02rem;
+  font-weight: 720;
+
+  line-height: 1.35;
 }
 
-.explore-description {
-  margin-top: 6px;
+
+.exploring-description {
+  margin-top: 8px;
 
   font-size: 0.82rem;
-  line-height: 1.5;
+  line-height: 1.6;
 
   opacity: 0.62;
 }
 
 
-/* ================================
-   NUMBER
-   ================================ */
+.exploring-item-01 {
+  --explore-accent: #4285f4;
+}
 
-.explore-number {
-  align-self: flex-start;
+.exploring-item-02 {
+  --explore-accent: #00a99d;
+}
 
-  margin-right: 16px;
-  margin-top: 2px;
+.exploring-item-03 {
+  --explore-accent: #c0392b;
+}
 
-  font-size: 0.68rem;
-  font-weight: 700;
-
-  letter-spacing: 0.08em;
-
-  color: var(--accent);
-
-  opacity: 0.55;
+.exploring-item-04 {
+  --explore-accent: #7957b5;
 }
 
 
-/* ================================
-   ARROW
-   ================================ */
+/* =========================================================
+   EXPLORE
+   ========================================================= */
 
-.explore-link {
-  margin-left: 16px;
+.home-explore {
+  display: grid;
 
-  font-size: 0.76rem;
-  font-weight: 600;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-  color: var(--accent);
+  gap: 13px;
+}
 
-  opacity: 0.35;
 
-  white-space: nowrap;
+.home-explore-card {
+  display: flex;
+  align-items: center;
+
+  min-height: 72px;
+
+  padding: 15px 17px;
+
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  border-radius: 16px;
+
+  background: rgba(127, 127, 127, 0.035);
+
+  color: inherit !important;
+  text-decoration: none !important;
 
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.explore-item:hover .explore-link {
-  opacity: 0.95;
-
-  transform: translate(3px, -2px);
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
 
 
-/* ================================
-   INDIVIDUAL COLORS
-   ================================ */
+.home-explore-card:hover {
+  transform: translateY(-3px);
 
-.explore-item-01 {
-  --accent: #4285f4;
-}
+  border-color: rgba(127, 127, 127, 0.25);
 
-.explore-item-02 {
-  --accent: #00a99d;
-}
-
-.explore-item-03 {
-  --accent: #c0392b;
-}
-
-.explore-item-04 {
-  --accent: #e39a28;
-}
-
-.explore-item-05 {
-  --accent: #7957b5;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.06);
 }
 
 
-/* ================================
-   LAST CARD
-   ================================ */
+.home-explore-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
 
-.explore-item-05 {
-  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  border-radius: 11px;
+
+  background: rgba(127, 127, 127, 0.09);
+
+  font-size: 14px;
 }
 
 
-/* ================================
+.home-explore-name {
+  font-size: 0.83rem;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   LATEST POSTS
+   ========================================================= */
+
+.home-posts {
+  margin-top: 48px;
+}
+
+
+.home-posts-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.home-posts-title {
+  margin: 0;
+
+  font-size: 1.35rem;
+  font-weight: 750;
+}
+
+
+.home-posts-subtitle {
+  font-size: 0.75rem;
+
+  opacity: 0.42;
+}
+
+
+.post-preview {
+  margin-bottom: 16px;
+
+  padding: 21px 22px;
+
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  border-radius: 18px;
+
+  background: rgba(127, 127, 127, 0.025);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+
+.post-preview:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(127, 127, 127, 0.25);
+
+  box-shadow:
+    0 9px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.post-preview h3 {
+  margin: 0;
+
+  font-size: 1.02rem;
+}
+
+
+.post-preview h3 a {
+  text-decoration: none;
+}
+
+
+.post-preview p {
+  margin: 8px 0 0;
+
+  font-size: 0.84rem;
+
+  line-height: 1.55;
+
+  opacity: 0.65;
+}
+
+
+.post-meta {
+  margin-top: 12px;
+
+  font-size: 0.72rem;
+
+  opacity: 0.42;
+}
+
+
+/* =========================================================
    DARK MODE
-   ================================ */
+   ========================================================= */
 
-[data-mode="dark"] .explore-item {
-  background: rgba(28, 28, 30, 0.92);
+[data-mode="dark"] .home-hero {
+  border-color: rgba(255, 255, 255, 0.08);
 
-  border-color: rgba(255, 255, 255, 0.09);
-
-  box-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.18),
-    0 10px 28px rgba(0, 0, 0, 0.22);
-}
-
-[data-mode="dark"] .explore-item:hover {
-  border-color: color-mix(
-    in srgb,
-    var(--accent) 35%,
-    transparent
-  );
+  background: rgba(255, 255, 255, 0.025);
 
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.25),
-    0 18px 40px rgba(0, 0, 0, 0.32);
+    0 5px 20px rgba(0, 0, 0, 0.18),
+    0 20px 50px rgba(0, 0, 0, 0.22);
 }
 
 
-/* ================================
-   TABLET
-   ================================ */
+[data-mode="dark"] .exploring-item,
+[data-mode="dark"] .home-explore-card,
+[data-mode="dark"] .post-preview {
+  border-color: rgba(255, 255, 255, 0.08);
+}
 
-@media (max-width: 800px) {
 
-  .explore-dashboard {
+[data-mode="dark"] .exploring-item:hover,
+[data-mode="dark"] .home-explore-card:hover,
+[data-mode="dark"] .post-preview:hover {
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .home-hero {
+    padding: 45px 32px;
+  }
+
+  .currently-exploring {
     grid-template-columns: 1fr;
-
-    gap: 15px;
-
-    margin: 26px 0;
   }
 
-  .explore-item {
-    min-height: 105px;
-
-    padding: 19px 20px;
-
-    border-radius: 18px;
-  }
-
-  .explore-symbol {
-    flex-basis: 53px;
-
-    width: 53px;
-    height: 53px;
-
-    margin-right: 15px;
-
-    border-radius: 15px;
-  }
-
-  .explore-item-05 {
-    grid-column: auto;
+  .home-explore {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 }
 
 
-/* ================================
-   SMALL MOBILE
-   ================================ */
+@media (max-width: 600px) {
 
-@media (max-width: 520px) {
+  .home-hero {
+    margin-top: 10px;
 
-  .explore-item {
-    min-height: 96px;
+    padding: 38px 23px;
 
-    padding: 17px 16px;
-
-    border-radius: 16px;
+    border-radius: 22px;
   }
 
-  .explore-symbol {
-    flex-basis: 48px;
-
-    width: 48px;
-    height: 48px;
-
-    margin-right: 13px;
-
-    border-radius: 14px;
-
-    font-size: 17px;
+  .home-explore {
+    grid-template-columns: 1fr;
   }
 
-  .explore-title {
-    font-size: 0.98rem;
+  .home-section {
+    margin: 36px 0;
   }
 
-  .explore-description {
-    font-size: 0.78rem;
+  .home-section-label {
+    display: none;
   }
 
-  .explore-number,
-  .explore-link {
+  .exploring-item {
+    min-height: 125px;
+
+    padding: 20px;
+  }
+
+  .post-preview {
+    padding: 18px;
+  }
+
+  .home-posts-subtitle {
     display: none;
   }
 }
@@ -362,162 +624,377 @@ Explore the different areas of my scientific work, educational materials, and pr
 </style>
 
 
-<div class="explore-dashboard">
+<div class="home-page">
 
 
-  <!-- 01 -->
+<div class="home-feature-image">
+  <img
+    src="{{ '/assets/img/Andromeda1.jpg' | relative_url }}"
+    alt="The Andromeda Galaxy"
+  >
+</div>
 
-  <div class="explore-item explore-item-01">
 
-    <div class="explore-number">
-      01
-    </div>
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
-    <div class="explore-symbol">
-      <i class="fas fa-chalkboard-user"></i>
-    </div>
+  <section class="home-hero">
 
-    <div class="explore-text">
+    <div class="home-hero-content">
 
-      <div class="explore-title">
-        Lectures
+      <div class="home-eyebrow">
+        Physics · Cosmology · Gravitation
       </div>
 
-      <div class="explore-description">
-        Educational materials, lecture notes, and learning resources.
+      <h1 class="home-title">
+        Mohammadreza Davari
+      </h1>
+
+      <div class="home-subtitle">
+        Exploring fundamental questions about the universe.
       </div>
 
-    </div>
-
-    <div class="explore-link">
-      Explore ↗
-    </div>
-
-  </div>
-
-
-  <!-- 02 -->
-
-  <div class="explore-item explore-item-02">
-
-    <div class="explore-number">
-      02
-    </div>
-
-    <div class="explore-symbol">
-      <i class="fas fa-chart-line"></i>
-    </div>
-
-    <div class="explore-text">
-
-      <div class="explore-title">
-        Visual Science
+      <div class="home-description">
+        Research, scientific ideas, educational materials,
+        visual explorations, and computational projects
+        across physics and cosmology.
       </div>
 
-      <div class="explore-description">
-        Scientific diagrams, visualizations, simulations, and interactive content.
-      </div>
+      <div class="home-actions">
 
-    </div>
+        <a
+          class="home-button home-button-primary"
+          href="{{ '/publications/' | relative_url }}"
+        >
+          Publications&nbsp; ↗
+        </a>
 
-    <div class="explore-link">
-      Explore ↗
-    </div>
+        <a
+          class="home-button home-button-secondary"
+          href="{{ '/explore/' | relative_url }}"
+        >
+          Explore&nbsp; ↗
+        </a>
 
-  </div>
-
-
-  <!-- 03 -->
-
-  <div class="explore-item explore-item-03">
-
-    <div class="explore-number">
-      03
-    </div>
-
-    <div class="explore-symbol">
-      <i class="fas fa-flask"></i>
-    </div>
-
-    <div class="explore-text">
-
-      <div class="explore-title">
-        Research
-      </div>
-
-      <div class="explore-description">
-        Research ideas, scientific results, questions, and ongoing work.
       </div>
 
     </div>
 
-    <div class="explore-link">
-      Explore ↗
+  </section>
+
+
+  <!-- =====================================================
+       CURRENTLY EXPLORING
+       ===================================================== -->
+
+  <section class="home-section">
+
+    <div class="home-section-heading">
+
+      <h2 class="home-section-title">
+        Currently Exploring
+      </h2>
+
+      <span class="home-section-label">
+        Research & Ideas
+      </span>
+
     </div>
 
-  </div>
+
+    <div class="currently-exploring">
 
 
-  <!-- 04 -->
+      <div class="exploring-item exploring-item-01">
 
-  <div class="explore-item explore-item-04">
+        <div class="exploring-number">
+          01
+        </div>
 
-    <div class="explore-number">
-      04
-    </div>
+        <div class="exploring-content">
 
-    <div class="explore-symbol">
-      <i class="fas fa-pen-to-square"></i>
-    </div>
+          <div class="exploring-title">
+            The Nature of Time
+          </div>
 
-    <div class="explore-text">
+          <div class="exploring-description">
+            Exploring fundamental questions about the origin,
+            direction, structure, and emergence of time.
+          </div>
 
-      <div class="explore-title">
-        Scientific Notes
+        </div>
+
       </div>
 
-      <div class="explore-description">
-        Short scientific explanations, ideas, derivations, and notes.
+
+      <div class="exploring-item exploring-item-02">
+
+        <div class="exploring-number">
+          02
+        </div>
+
+        <div class="exploring-content">
+
+          <div class="exploring-title">
+            Beyond ΛCDM
+          </div>
+
+          <div class="exploring-description">
+            Investigating theoretical and observational
+            challenges to the standard cosmological model.
+          </div>
+
+        </div>
+
       </div>
 
-    </div>
 
-    <div class="explore-link">
-      Explore ↗
-    </div>
+      <div class="exploring-item exploring-item-03">
 
-  </div>
+        <div class="exploring-number">
+          03
+        </div>
 
+        <div class="exploring-content">
 
-  <!-- 05 -->
+          <div class="exploring-title">
+            Modified Gravity
+          </div>
 
-  <div class="explore-item explore-item-05">
+          <div class="exploring-description">
+            Studying alternative descriptions of gravity
+            and their possible cosmological consequences.
+          </div>
 
-    <div class="explore-number">
-      05
-    </div>
+        </div>
 
-    <div class="explore-symbol">
-      <i class="fas fa-code"></i>
-    </div>
-
-    <div class="explore-text">
-
-      <div class="explore-title">
-        Projects
       </div>
 
-      <div class="explore-description">
-        Scientific software, computational tools, and research projects.
+
+      <div class="exploring-item exploring-item-04">
+
+        <div class="exploring-number">
+          04
+        </div>
+
+        <div class="exploring-content">
+
+          <div class="exploring-title">
+            Foundations of Physics
+          </div>
+
+          <div class="exploring-description">
+            Examining fundamental questions concerning
+            spacetime, gravity, cosmology, and physical reality.
+          </div>
+
+        </div>
+
       </div>
 
+
     </div>
 
-    <div class="explore-link">
-      Explore ↗
+  </section>
+
+
+  <!-- =====================================================
+       EXPLORE
+       ===================================================== -->
+
+  <section class="home-section">
+
+    <div class="home-section-heading">
+
+      <h2 class="home-section-title">
+        Explore
+      </h2>
+
+      <span class="home-section-label">
+        Scientific Work
+      </span>
+
     </div>
 
-  </div>
+
+    <div class="home-explore">
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-layer-group"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Explore All
+        </div>
+
+      </a>
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-chalkboard-user"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Lectures
+        </div>
+
+      </a>
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Visual Science
+        </div>
+
+      </a>
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-flask"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Research
+        </div>
+
+      </a>
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-pen-to-square"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Scientific Notes
+        </div>
+
+      </a>
+
+
+      <a
+        class="home-explore-card"
+        href="{{ '/explore/' | relative_url }}"
+      >
+
+        <div class="home-explore-icon">
+          <i class="fas fa-code"></i>
+        </div>
+
+        <div class="home-explore-name">
+          Projects
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       LATEST POSTS
+       ===================================================== -->
+
+  <section class="home-posts">
+
+    <div class="home-posts-header">
+
+      <h2 class="home-posts-title">
+        Latest Posts
+      </h2>
+
+      <span class="home-posts-subtitle">
+        From the research journal
+      </span>
+
+    </div>
+
+
+    {% for post in site.posts limit:5 %}
+
+      <article class="post-preview">
+
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+
+
+        {% if post.description %}
+
+          <p>
+            {{ post.description }}
+          </p>
+
+        {% elsif post.excerpt %}
+
+          <p>
+            {{ post.excerpt | strip_html | truncate: 180 }}
+          </p>
+
+        {% endif %}
+
+
+        <div class="post-meta">
+
+          {{ post.date | date: "%B %d, %Y" }}
+
+          {% if post.categories.size > 0 %}
+
+            ·
+
+            {% for category in post.categories %}
+
+              {{ category }}
+
+              {% unless forloop.last %}
+                ·
+              {% endunless %}
+
+            {% endfor %}
+
+          {% endif %}
+
+        </div>
+
+      </article>
+
+    {% endfor %}
+
+
+  </section>
 
 
 </div>
