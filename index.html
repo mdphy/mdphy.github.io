@@ -5,7 +5,7 @@ layout: default
 <style>
 
 /* =========================================================
-   HOME — MAIN
+   HOME PAGE
    ========================================================= */
 
 .home-page {
@@ -45,8 +45,6 @@ layout: default
     0 18px 45px rgba(0, 0, 0, 0.045);
 }
 
-
-/* decorative grid */
 
 .home-hero::before {
   content: "";
@@ -140,6 +138,7 @@ layout: default
 .home-actions {
   display: flex;
   flex-wrap: wrap;
+
   gap: 11px;
 
   margin-top: 28px;
@@ -198,7 +197,7 @@ layout: default
 
 
 /* =========================================================
-   SECTION TITLE
+   SECTIONS
    ========================================================= */
 
 .home-section {
@@ -397,6 +396,65 @@ layout: default
 }
 
 
+.post-preview {
+  margin-bottom: 18px;
+
+  padding: 22px;
+
+  border: 1px solid rgba(127, 127, 127, 0.12);
+  border-radius: 18px;
+
+  background: rgba(127, 127, 127, 0.025);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+
+.post-preview:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(127, 127, 127, 0.25);
+
+  box-shadow:
+    0 9px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.post-preview h3 {
+  margin: 0;
+
+  font-size: 1.02rem;
+}
+
+
+.post-preview h3 a {
+  text-decoration: none;
+}
+
+
+.post-preview p {
+  margin: 8px 0 0;
+
+  font-size: 0.84rem;
+
+  line-height: 1.55;
+
+  opacity: 0.65;
+}
+
+
+.post-meta {
+  margin-top: 12px;
+
+  font-size: 0.72rem;
+
+  opacity: 0.42;
+}
+
+
 /* =========================================================
    DARK MODE
    ========================================================= */
@@ -419,6 +477,13 @@ layout: default
   box-shadow:
     0 5px 20px rgba(0, 0, 0, 0.18),
     0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+
+[data-mode="dark"] .post-preview {
+  border-color: rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.025);
 }
 
 
@@ -468,6 +533,10 @@ layout: default
 
   .home-section-label {
     display: none;
+  }
+
+  .post-preview {
+    padding: 18px;
   }
 }
 
@@ -645,7 +714,7 @@ layout: default
 
       <a
         class="home-explore-card"
-        href="{{ '/categories/lectures/' | relative_url }}"
+        href="{{ '/explore/' | relative_url }}"
       >
 
         <div class="home-explore-icon">
@@ -661,7 +730,7 @@ layout: default
 
       <a
         class="home-explore-card"
-        href="{{ '/categories/visual-science/' | relative_url }}"
+        href="{{ '/explore/' | relative_url }}"
       >
 
         <div class="home-explore-icon">
@@ -677,7 +746,7 @@ layout: default
 
       <a
         class="home-explore-card"
-        href="{{ '/categories/research/' | relative_url }}"
+        href="{{ '/explore/' | relative_url }}"
       >
 
         <div class="home-explore-icon">
@@ -693,7 +762,7 @@ layout: default
 
       <a
         class="home-explore-card"
-        href="{{ '/categories/scientific-notes/' | relative_url }}"
+        href="{{ '/explore/' | relative_url }}"
       >
 
         <div class="home-explore-icon">
@@ -709,7 +778,7 @@ layout: default
 
       <a
         class="home-explore-card"
-        href="{{ '/categories/projects/' | relative_url }}"
+        href="{{ '/explore/' | relative_url }}"
       >
 
         <div class="home-explore-icon">
@@ -757,27 +826,48 @@ layout: default
           </a>
         </h3>
 
+
         {% if post.description %}
+
           <p>
             {{ post.description }}
           </p>
+
+        {% elsif post.excerpt %}
+
+          <p>
+            {{ post.excerpt | strip_html | truncate: 180 }}
+          </p>
+
         {% endif %}
 
+
         <div class="post-meta">
+
           {{ post.date | date: "%B %d, %Y" }}
 
           {% if post.categories.size > 0 %}
+
             ·
+
             {% for category in post.categories %}
+
               {{ category }}
-              {% unless forloop.last %} · {% endunless %}
+
+              {% unless forloop.last %}
+                ·
+              {% endunless %}
+
             {% endfor %}
+
           {% endif %}
+
         </div>
 
       </article>
 
     {% endfor %}
+
 
   </section>
 
