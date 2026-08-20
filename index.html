@@ -6,7 +6,7 @@ title: Home
 <style>
 
 /* =========================================================
-   HOME PAGE
+   HOME
    ========================================================= */
 
 .home-page {
@@ -23,7 +23,7 @@ title: Home
   position: relative;
   overflow: hidden;
 
-  margin: 18px 0 38px;
+  margin: 18px 0 42px;
   padding: 58px 48px;
 
   border: 1px solid rgba(127, 127, 127, 0.12);
@@ -162,8 +162,7 @@ title: Home
 
   transition:
     transform 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease;
+    box-shadow 0.22s ease;
 }
 
 
@@ -198,11 +197,11 @@ title: Home
 
 
 /* =========================================================
-   SECTIONS
+   SECTION
    ========================================================= */
 
 .home-section {
-  margin: 42px 0;
+  margin: 44px 0;
 }
 
 
@@ -211,17 +210,17 @@ title: Home
   align-items: baseline;
   justify-content: space-between;
 
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 
 .home-section-title {
   margin: 0;
 
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 750;
 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 
@@ -236,57 +235,128 @@ title: Home
 
 
 /* =========================================================
-   RESEARCH FOCUS
+   CURRENTLY EXPLORING
    ========================================================= */
 
-.home-focus-grid {
+.currently-exploring {
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0, 1fr));
+    repeat(2, minmax(0, 1fr));
 
-  gap: 13px;
+  gap: 15px;
 }
 
 
-.home-focus-card {
-  padding: 19px 17px;
+.exploring-item {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  min-height: 145px;
+
+  padding: 23px;
 
   border: 1px solid rgba(127, 127, 127, 0.12);
-  border-radius: 17px;
+  border-radius: 19px;
 
-  background: rgba(127, 127, 127, 0.035);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(127, 127, 127, 0.045),
+      transparent 70%
+    );
+
+  overflow: hidden;
 
   transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    background 0.22s ease;
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease;
 }
 
 
-.home-focus-card:hover {
-  transform: translateY(-3px);
+.exploring-item::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: var(--explore-accent);
+
+  opacity: 0.65;
+}
+
+
+.exploring-item:hover {
+  transform: translateY(-4px);
 
   border-color: rgba(127, 127, 127, 0.25);
 
-  background: rgba(127, 127, 127, 0.065);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.065);
 }
 
 
-.home-focus-icon {
-  margin-bottom: 12px;
+.exploring-number {
+  flex: 0 0 auto;
 
-  font-size: 18px;
+  margin-right: 18px;
 
-  opacity: 0.7;
+  font-size: 0.70rem;
+  font-weight: 750;
+
+  letter-spacing: 0.08em;
+
+  color: var(--explore-accent);
+
+  opacity: 0.65;
 }
 
 
-.home-focus-name {
-  font-size: 0.86rem;
-  font-weight: 700;
+.exploring-content {
+  min-width: 0;
+}
+
+
+.exploring-title {
+  font-size: 1.02rem;
+  font-weight: 720;
 
   line-height: 1.35;
+}
+
+
+.exploring-description {
+  margin-top: 8px;
+
+  font-size: 0.82rem;
+  line-height: 1.6;
+
+  opacity: 0.62;
+}
+
+
+.exploring-item-01 {
+  --explore-accent: #4285f4;
+}
+
+.exploring-item-02 {
+  --explore-accent: #00a99d;
+}
+
+.exploring-item-03 {
+  --explore-accent: #c0392b;
+}
+
+.exploring-item-04 {
+  --explore-accent: #7957b5;
 }
 
 
@@ -305,8 +375,6 @@ title: Home
 
 
 .home-explore-card {
-  position: relative;
-
   display: flex;
   align-items: center;
 
@@ -365,17 +433,17 @@ title: Home
 
 
 /* =========================================================
-   POSTS
+   LATEST POSTS
    ========================================================= */
 
 .home-posts {
-  margin-top: 45px;
+  margin-top: 48px;
 }
 
 
 .home-posts-header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 
   margin-bottom: 20px;
@@ -398,9 +466,9 @@ title: Home
 
 
 .post-preview {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
-  padding: 22px;
+  padding: 21px 22px;
 
   border: 1px solid rgba(127, 127, 127, 0.12);
   border-radius: 18px;
@@ -481,10 +549,17 @@ title: Home
 }
 
 
+[data-mode="dark"] .exploring-item,
+[data-mode="dark"] .home-explore-card,
 [data-mode="dark"] .post-preview {
   border-color: rgba(255, 255, 255, 0.08);
+}
 
-  background: rgba(255, 255, 255, 0.025);
+
+[data-mode="dark"] .exploring-item:hover,
+[data-mode="dark"] .home-explore-card:hover,
+[data-mode="dark"] .post-preview:hover {
+  border-color: rgba(255, 255, 255, 0.20);
 }
 
 
@@ -498,9 +573,8 @@ title: Home
     padding: 45px 32px;
   }
 
-  .home-focus-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .currently-exploring {
+    grid-template-columns: 1fr;
   }
 
   .home-explore {
@@ -520,24 +594,30 @@ title: Home
     border-radius: 22px;
   }
 
-  .home-focus-grid {
-    grid-template-columns: 1fr;
-  }
-
   .home-explore {
     grid-template-columns: 1fr;
   }
 
   .home-section {
-    margin: 34px 0;
+    margin: 36px 0;
   }
 
   .home-section-label {
     display: none;
   }
 
+  .exploring-item {
+    min-height: 125px;
+
+    padding: 20px;
+  }
+
   .post-preview {
     padding: 18px;
+  }
+
+  .home-posts-subtitle {
+    display: none;
   }
 }
 
@@ -597,7 +677,7 @@ title: Home
 
 
   <!-- =====================================================
-       RESEARCH FOCUS
+       CURRENTLY EXPLORING
        ===================================================== -->
 
   <section class="home-section">
@@ -605,66 +685,102 @@ title: Home
     <div class="home-section-heading">
 
       <h2 class="home-section-title">
-        Research Focus
+        Currently Exploring
       </h2>
 
       <span class="home-section-label">
-        Areas of interest
+        Research & Ideas
       </span>
 
     </div>
 
 
-    <div class="home-focus-grid">
+    <div class="currently-exploring">
 
 
-      <div class="home-focus-card">
+      <div class="exploring-item exploring-item-01">
 
-        <div class="home-focus-icon">
-          <i class="fas fa-globe"></i>
+        <div class="exploring-number">
+          01
         </div>
 
-        <div class="home-focus-name">
-          Cosmology
-        </div>
+        <div class="exploring-content">
 
-      </div>
+          <div class="exploring-title">
+            The Nature of Time
+          </div>
 
+          <div class="exploring-description">
+            Exploring fundamental questions about the origin,
+            direction, structure, and emergence of time.
+          </div>
 
-      <div class="home-focus-card">
-
-        <div class="home-focus-icon">
-          <i class="fas fa-atom"></i>
-        </div>
-
-        <div class="home-focus-name">
-          Gravitation
         </div>
 
       </div>
 
 
-      <div class="home-focus-card">
+      <div class="exploring-item exploring-item-02">
 
-        <div class="home-focus-icon">
-          <i class="fas fa-infinity"></i>
+        <div class="exploring-number">
+          02
         </div>
 
-        <div class="home-focus-name">
-          Fundamental Physics
+        <div class="exploring-content">
+
+          <div class="exploring-title">
+            Beyond ΛCDM
+          </div>
+
+          <div class="exploring-description">
+            Investigating theoretical and observational
+            challenges to the standard cosmological model.
+          </div>
+
         </div>
 
       </div>
 
 
-      <div class="home-focus-card">
+      <div class="exploring-item exploring-item-03">
 
-        <div class="home-focus-icon">
-          <i class="fas fa-clock"></i>
+        <div class="exploring-number">
+          03
         </div>
 
-        <div class="home-focus-name">
-          Nature of Time
+        <div class="exploring-content">
+
+          <div class="exploring-title">
+            Modified Gravity
+          </div>
+
+          <div class="exploring-description">
+            Studying alternative descriptions of gravity
+            and their possible cosmological consequences.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="exploring-item exploring-item-04">
+
+        <div class="exploring-number">
+          04
+        </div>
+
+        <div class="exploring-content">
+
+          <div class="exploring-title">
+            Foundations of Physics
+          </div>
+
+          <div class="exploring-description">
+            Examining fundamental questions concerning
+            spacetime, gravity, cosmology, and physical reality.
+          </div>
+
         </div>
 
       </div>
@@ -688,7 +804,7 @@ title: Home
       </h2>
 
       <span class="home-section-label">
-        Scientific work
+        Scientific Work
       </span>
 
     </div>
@@ -707,7 +823,7 @@ title: Home
         </div>
 
         <div class="home-explore-name">
-          Explore all
+          Explore All
         </div>
 
       </a>
