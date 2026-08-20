@@ -1,0 +1,152 @@
+/* =========================================================
+   MDPHY — SKY · SEA · SAND THEME
+   ========================================================= */
+
+:root {
+  --mdphy-sky: #55afc7;
+  --mdphy-sky-dark: #3f96ae;
+
+  --mdphy-sea: #55afa0;
+  --mdphy-sea-dark: #418f82;
+
+  --mdphy-sand: #d8c29d;
+
+  --mdphy-bg: #f8faf7;
+  --mdphy-surface: #ffffff;
+
+  --mdphy-text: #24343a;
+  --mdphy-muted: #68777b;
+  --mdphy-border: #dde7e4;
+}
+
+
+/* Background */
+
+body {
+  background: var(--mdphy-bg);
+  color: var(--mdphy-text);
+}
+
+
+/* Links */
+
+a {
+  color: var(--mdphy-sky);
+}
+
+a:hover {
+  color: var(--mdphy-sky-dark);
+}
+
+
+/* Sidebar */
+
+#sidebar {
+  background: var(--mdphy-surface);
+}
+
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+  color: var(--mdphy-sky);
+}
+
+
+/* Site title */
+
+#sidebar .site-title {
+  color: var(--mdphy-sea);
+}
+
+
+/* Search */
+
+#search-input {
+  border-color: var(--mdphy-border);
+}
+
+#search-input:focus {
+  border-color: var(--mdphy-sky);
+}
+
+
+/* Buttons */
+
+.btn-primary {
+  background-color: var(--mdphy-sky);
+  border-color: var(--mdphy-sky);
+}
+
+.btn-primary:hover {
+  background-color: var(--mdphy-sky-dark);
+  border-color: var(--mdphy-sky-dark);
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mdphy-text);
+}
+
+
+/* Borders */
+
+hr {
+  border-color: var(--mdphy-border);
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-mode="dark"] {
+
+  --mdphy-bg: #102a30;
+  --mdphy-surface: #16363d;
+
+  --mdphy-text: #eaf3f1;
+  --mdphy-muted: #a9bcbe;
+
+  --mdphy-border: #29464c;
+
+  --mdphy-sky: #69c4df;
+  --mdphy-sky-dark: #82d1e8;
+
+  --mdphy-sea: #69c2ae;
+  --mdphy-sea-dark: #82cfbd;
+
+  --mdphy-sand: #d5be94;
+}
+
+
+[data-mode="dark"] body {
+  background: var(--mdphy-bg);
+  color: var(--mdphy-text);
+}
+
+
+[data-mode="dark"] #sidebar {
+  background: var(--mdphy-surface);
+}
+
+
+[data-mode="dark"] a {
+  color: var(--mdphy-sky);
+}
+
+
+[data-mode="dark"] a:hover {
+  color: var(--mdphy-sky-dark);
+}
+
+
+[data-mode="dark"] #sidebar .nav-link:hover,
+[data-mode="dark"] #sidebar .nav-link.active {
+  color: var(--mdphy-sky);
+}
