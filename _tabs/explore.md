@@ -256,17 +256,21 @@ Explore the different areas of my scientific work, educational materials, and pr
    DARK MODE
    ================================ */
 
-[data-mode="dark"] .explore-item {
-  background: rgba(28, 28, 30, 0.92);
 
-  border-color: rgba(255, 255, 255, 0.09);
+/* ================================
+   DARK MODE
+   ================================ */
+
+html[data-mode="dark"] .explore-item {
+  background: #1c1c1e;
+  border-color: rgba(255, 255, 255, 0.10);
 
   box-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.18),
-    0 10px 28px rgba(0, 0, 0, 0.22);
+    0 3px 12px rgba(0, 0, 0, 0.25),
+    0 10px 28px rgba(0, 0, 0, 0.30);
 }
 
-[data-mode="dark"] .explore-item:hover {
+html[data-mode="dark"] .explore-item:hover {
   border-color: color-mix(
     in srgb,
     var(--accent) 35%,
@@ -274,10 +278,23 @@ Explore the different areas of my scientific work, educational materials, and pr
   );
 
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.25),
-    0 18px 40px rgba(0, 0, 0, 0.32);
+    0 8px 20px rgba(0, 0, 0, 0.30),
+    0 18px 40px rgba(0, 0, 0, 0.38);
 }
 
+html[data-mode="dark"] .explore-title {
+  color: inherit;
+}
+
+html[data-mode="dark"] .explore-description {
+  color: inherit;
+}
+
+html[data-mode="dark"] .explore-number,
+html[data-mode="dark"] .explore-link,
+html[data-mode="dark"] .explore-symbol {
+  color: var(--accent);
+}
 
 /* ================================
    TABLET
